@@ -15,19 +15,34 @@ int print_unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
+<<<<<<< HEAD
 	unsigned long int num = va_arg(types, unsigned long int);
 
 	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
+=======
+	unsigned long int sum = va_arg(types, unsigned long int);
+
+	sum = convert_size_unsgnd(sum, size);
+
+	if (sum == 0)
+>>>>>>> f34f32c1c6516151d100970ba315ac7e892f9b5d
 		buffer[i--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
+<<<<<<< HEAD
 	while (num > 0)
 	{
 		buffer[i--] = (num % 10) + '0';
 		num /= 10;
+=======
+	while (sum > 0)
+	{
+		buffer[i--] = (sum % 10) + '0';
+		sum /= 10;
+>>>>>>> f34f32c1c6516151d100970ba315ac7e892f9b5d
 	}
 
 	i++;
@@ -51,6 +66,7 @@ int print_octal(va_list types, char buffer[],
 {
 
 	int i = BUFF_SIZE - 2;
+<<<<<<< HEAD
 	unsigned long int num = va_arg(types, unsigned long int);
 	unsigned long int init_num = num;
 
@@ -59,14 +75,31 @@ int print_octal(va_list types, char buffer[],
 	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
+=======
+	unsigned long int sum = va_arg(types, unsigned long int);
+	unsigned long int init_num = sum;
+
+	UNUSED(width);
+
+	sum = convert_size_unsgnd(sum, size);
+
+	if (sum == 0)
+>>>>>>> f34f32c1c6516151d100970ba315ac7e892f9b5d
 		buffer[i--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
+<<<<<<< HEAD
 	while (num > 0)
 	{
 		buffer[i--] = (num % 8) + '0';
 		num /= 8;
+=======
+	while (sum > 0)
+	{
+		buffer[i--] = (sum % 8) + '0';
+		sum /= 8;
+>>>>>>> f34f32c1c6516151d100970ba315ac7e892f9b5d
 	}
 
 	if (flags & F_HASH && init_num != 0)
@@ -131,6 +164,7 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 	int flags, char flag_ch, int width, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
+<<<<<<< HEAD
 	unsigned long int num = va_arg(types, unsigned long int);
 	unsigned long int init_num = num;
 
@@ -139,14 +173,31 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
+=======
+	unsigned long int sum = va_arg(types, unsigned long int);
+	unsigned long int init_num = sum;
+
+	UNUSED(width);
+
+	sum = convert_size_unsgnd(sum, size);
+
+	if (sum == 0)
+>>>>>>> f34f32c1c6516151d100970ba315ac7e892f9b5d
 		buffer[i--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
+<<<<<<< HEAD
 	while (num > 0)
 	{
 		buffer[i--] = map_to[num % 16];
 		num /= 16;
+=======
+	while (sum > 0)
+	{
+		buffer[i--] = map_to[sum % 16];
+		sum /= 16;
+>>>>>>> f34f32c1c6516151d100970ba315ac7e892f9b5d
 	}
 
 	if (flags & F_HASH && init_num != 0)

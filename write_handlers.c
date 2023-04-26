@@ -200,7 +200,11 @@ int write_unsgnd(int is_negative, int ind,
  * @buffer: Arrays of chars
  * @ind: Index at which the number starts in the buffer
  * @length: Length of number
+<<<<<<< HEAD
  * @width: Width specifier
+=======
+ * @width: Wwidth specifier
+>>>>>>> f34f32c1c6516151d100970ba315ac7e892f9b5d
  * @flags: Flags specifier
  * @padd: Char representing the padding
  * @extra_c: Char representing extra char
